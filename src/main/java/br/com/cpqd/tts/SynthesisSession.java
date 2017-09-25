@@ -10,56 +10,56 @@ public class SynthesisSession
 	 *
 	 * This parameter expects an @b string value.
 	 */
-	public static final int TTS_PARAM_ENCODER = 0x01;
+	private static final int TTS_PARAM_ENCODER = 0x01;
 	
 	/**
 	 * @brief Volume of the shynthesized speech.
 	 *
 	 * This parameter should be an @b integer value from 1 to 100. The default value is 50.
 	 */
-	public static final int TTS_PARAM_VOLUME = 0x04;
+	private static final int TTS_PARAM_VOLUME = 0x04;
 	
 	/**
 	 * @brief Rate of the shynthesized speech.
 	 *
 	 * This parameter should be an @b integer value from 1 to 100 (linear scale). The default value is 50.
 	 */
-	public static final int TTS_PARAM_RATE = 0x05;
+	private static final int TTS_PARAM_RATE = 0x05;
 	
 	/**
 	 * @brief Amount of silence at the begin of synthesized speech.
 	 *
 	 * This parameter should be a positive @b integer value in miliseconds.
 	 */
-	public static final int TTS_PARAM_BEGIN_SILENCE = 0x07;
+	private static final int TTS_PARAM_BEGIN_SILENCE = 0x07;
 	
 	/**
 	 * @brief Amount of silence at the end of synthesized speech.
 	 *
 	 * This parameter should be a positive @b integer value in miliseconds.
 	 */
-	public static final int TTS_PARAM_END_SILENCE = 0x08;
+	private static final int TTS_PARAM_END_SILENCE = 0x08;
 	
 	/**
 	 * @brief Name of the default voice.
 	 *
 	 * This parameter expects an @b string value. Valid values depends on the loaded voices.
 	 */
-	public static final int TTS_PARAM_VOICE = 0x0B;
+	private static final int TTS_PARAM_VOICE = 0x0B;
 	
 	/**
 	 * @brief Pitch of the synthesized speech.
 	 *
 	 * This parameter should be an @b integer value from 1 to 100 (linear scale). The default value is 50.
 	 */
-	public static final int TTS_PARAM_PITCH = 0x0C;
+	private static final int TTS_PARAM_PITCH = 0x0C;
 		
 	/**
 	 * @brief Define the text is in SSML format.
 	 *
 	 * This parameter should be the @b interger value '1' (is true) or '0' (is false). The default value is 0.
 	 */
-	public static final int TTS_PARAM_SSML_TEXT = 0x0D;
+	private static final int TTS_PARAM_SSML_TEXT = 0x0D;
 		
 	long handle;
 
@@ -71,7 +71,7 @@ public class SynthesisSession
 		this.engine = engine;
 	}
 
-	public void validate() throws SynthesisException
+	protected void validate() throws SynthesisException
 	{
 		if (handle <= 0) throw new SynthesisException(0, "Invalid session");
 	}
@@ -232,6 +232,34 @@ public class SynthesisSession
 		validate();
 		
 		engine.wrapper.setStringParameter(handle, TTS_PARAM_VOICE, value);
+	}
+	
+	public long getBeginSilence() throws SynthesisException
+	{
+		validate();
+		
+		return (long) engine.wrapper.getFloatParameter(handle, TTS_PARAM_BEGIN_SILENCE);
+	}
+	
+	public void setBeginSilence( long value ) throws SynthesisException
+	{
+		validate();
+		
+		engine.wrapper.setFloatParameter(handle, TTS_PARAM_BEGIN_SILENCE, (float) value);
+	}
+
+	public long getEndSilence() throws SynthesisException
+	{
+		validate();
+		
+		return (long) engine.wrapper.getFloatParameter(handle, TTS_PARAM_END_SILENCE);
+	}
+	
+	public void setEndSilence( long value ) throws SynthesisException
+	{
+		validate();
+		
+		engine.wrapper.setFloatParameter(handle, TTS_PARAM_END_SILENCE, (float) value);
 	}
 	
 }

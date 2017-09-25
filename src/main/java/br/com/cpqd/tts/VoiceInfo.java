@@ -3,98 +3,156 @@ package br.com.cpqd.tts;
 public class VoiceInfo
 {
 
-	/**
-	 * Unique voice name.
-	 */
+	enum VoiceAge
+	{
+
+		/**
+		 * Match with any age. This value can be used while searching for
+		 * a voice.
+		 */
+		ANY,
+		
+		/**
+		 * Age roughly up to 12 years.
+		 */
+		CHILD,
+		
+		/**
+		 * Age roughly 13 to 19 years.
+		 */
+		TEENAGER,
+		
+		/**
+		 * @ingroup GRP_VOICE_INFO
+		 * @brief Age roughly 20 to 40 years.
+		 */
+		YOUNG_ADULT,
+		
+		/**
+		 * Age roughly 40 to 60 years.
+		 */
+		MIDDLE_ADULT,
+		
+		/**
+		 * Age roughly 60 years and up.
+		 */
+		OLDER_ADULT,
+		
+		/**
+		 * Neutral voice which the age is indeterminate (e.g artificial voice).
+		 */
+		NEUTRAL
+	}
+	
+	enum VoiceGender
+	{
+		
+		/**
+		 * Match with any gender. This value can be used while searching for
+		 * a voice.
+		 */
+		ANY,
+		
+		/**
+		 * Female voice.
+		 */
+		FEMALE,
+		
+		/**
+		 * Male voice.
+		 */
+		MALE,
+		
+		/**
+		 * Neutral voice that is neither male or female (e.g. artificial voice).
+		 */
+		NEUTRAL
+	}
+	
 	private String name;
 
-	/**
-	 * Path to the voice file.
-	 */
 	private String fileName;
 
-	/**
-	 * Number of bytes occupied by the voice file.
-	 */
 	private int fileSize;
 
-	/**
-	 * Number of bytes occupied by the voice in memory.
-	 */
 	private int memorySize;
 
-	/**
-	 * Age of the voice. Valid values are defined by @c TTS_VOICE_AGE_ prefixed
-	 * macros in @ref GRP_VOICE_INFO.
-	 */
 	private int age;
 
-	/**
-	 * Gender of the voice. Valid values are defined by @c TTS_VOICE_GENDER_
-	 * prefixed macros in @ref GRP_VOICE_INFO.
-	 */
 	private int gender;
 
-	/**
-	 * Specifies flags that indicate voice characteristics. Valid flags are
-	 * defined by
-	 * 
-	 * @c TTS_VOICE_FLAG_ prefixed macros in @ref GRP_VOICE_INFO.
-	 */
 	private int flags;
 
+	protected VoiceInfo()
+	{
+	}
+	
 	/**
-	 * Query used by the voice to find it's corresponding synthesis plugin.
+	 * Returns the voice name.
 	 */
-	private String query;
-
 	public String getName()
 	{
 		return name;
 	}
 
+	/**
+	 * Returns the path to the voice file.
+	 */
 	public String getFileName()
 	{
 		return fileName;
 	}
 
+	/**
+	 * Returns the number of bytes occupied by the voice file.
+	 */
 	public int getFileSize()
 	{
 		return fileSize;
 	}
 
+	/**
+	 * Returns the number of bytes occupied by the voice in memory.
+	 */
 	public int getMemorySize()
 	{
 		return memorySize;
 	}
 
-	public int getAge()
+	/**
+	 * Returns the age of the voice.
+	 */
+	public VoiceAge getAge()
 	{
-		return age;
+		if (age < 0 || age >= VoiceAge.values().length)
+			return VoiceAge.ANY;
+		return VoiceAge.values()[age];
 	}
 
-	public int getGender()
+	/**
+	 * Return the voice gender.
+	 */
+	public VoiceGender getGender()
 	{
-		return gender;
+		if (gender < 0 || gender >= VoiceGender.values().length)
+			return VoiceGender.ANY;
+		return VoiceGender.values()[gender];
 	}
 
+	/**
+	 * Returns flags that indicate voice characteristics.
+	 */
 	public int getFlags()
 	{
 		return flags;
 	}
 
-	public String getQuery()
-	{
-		return query;
-	}
-
 	@Override
 	public String toString()
 	{
-		return "TTS_VOICE_INFO [name=" + name + ", fileName=" + fileName
+		return "VoiceInfo [name=" + name + ", fileName=" + fileName
 				+ ", fileSize=" + fileSize + ", memorySize=" + memorySize
-				+ ", age=" + age + ", gender=" + gender + ", flags=" + flags
-				+ ", query=" + query + "]";
+				+ ", age=" + getAge() + ", gender=" + getGender() + ", flags=" + flags + "]";
 	}
 
 }

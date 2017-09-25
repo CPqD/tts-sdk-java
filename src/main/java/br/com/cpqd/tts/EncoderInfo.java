@@ -3,19 +3,19 @@ package br.com.cpqd.tts;
 public class EncoderInfo
 {
 
-	String name;
-	
-	String description;
-	
-	String codec;
+	private String name;
 
-	int sampleRate;
-	
-	int bitsPerSample;
-	
-	int channels;
-	
-	int flags;
+	private String description;
+
+	private String codec;
+
+	private int sampleRate;
+
+	private int bitsPerSample;
+
+	private int channels;
+
+	private int flags;
 
 	protected EncoderInfo()
 	{
@@ -45,7 +45,7 @@ public class EncoderInfo
 	{
 		return codec;
 	}
-	
+
 	/**
 	 * Returns the sample rate used by the encoder.
 	 */
@@ -75,4 +75,15 @@ public class EncoderInfo
 		return flags;
 	}
 
+	@Override
+	public String toString()
+	{
+		return "EncoderInfo [name=" + name
+				+ ", description=" + description
+				+ ", codec=" + codec
+				+ ", sampleRate=" + sampleRate
+				+ ", bitsPerSample=" + bitsPerSample
+				+ ", channels=" + channels
+				+ ", flags=" + flags + "]";
+	}
 }

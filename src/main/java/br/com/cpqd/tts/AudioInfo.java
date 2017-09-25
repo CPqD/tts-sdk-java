@@ -14,6 +14,10 @@ public class AudioInfo
 
 	private int sampleRate;
 
+	protected AudioInfo()
+	{
+	}
+	
 	/**
 	 * Returns the amount of speech (in miliseconds).
 	 *

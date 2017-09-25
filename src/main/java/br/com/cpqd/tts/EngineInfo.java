@@ -48,7 +48,7 @@ public class EngineInfo
 	@Override
 	public String toString()
 	{
-		return "TTS_ENGINE_INFO [version='" + version + "', maxSessions='"
+		return "EngineInfo [version='" + version + "', maxSessions='"
 				+ maxSessions + "', customerName='" + customerName
 				+ "', capabilities='" + capabilities + "']";
 	}

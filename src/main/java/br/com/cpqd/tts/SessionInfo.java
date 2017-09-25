@@ -9,6 +9,10 @@ public class SessionInfo
 
 	private int synthesisTime;
 
+	protected SessionInfo()
+	{
+	}
+	
 	/**
 	 * Returns the name of the voice in use.
 	 */
@@ -36,7 +40,7 @@ public class SessionInfo
 	@Override
 	public String toString()
 	{
-		return "TTS_SESSION_INFO [voiceName='" + voiceName + "', synthesisCount='" + synthesisCount
+		return "SessionInfo [voiceName='" + voiceName + "', synthesisCount='" + synthesisCount
 				+ "', synthesisTime='" + synthesisTime + "']";
 	}
 
