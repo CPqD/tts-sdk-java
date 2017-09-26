@@ -17,7 +17,7 @@ public class AudioInfo
 	protected AudioInfo()
 	{
 	}
-	
+
 	/**
 	 * Returns the amount of speech (in miliseconds).
 	 *
@@ -56,6 +56,9 @@ public class AudioInfo
 		return channels;
 	}
 
+	/**
+	 * Returns the sample rate.
+	 */
 	public int getSampleRate()
 	{
 		return sampleRate;

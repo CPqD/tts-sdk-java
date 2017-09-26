@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.com.cpqd.tts</groupId>
-	<artifactId>cpqdtts</artifactId>
-	<packaging>jar</packaging>
-	<name>CPqD TTS wrapper</name>
-	<version>4.0.14</version>
+	<artifactId>synthesizer-parent</artifactId>
+	<version>4.1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>Java wrapper for CPqD Texto Fala</name>
+	<description></description>
+
+	<modules>
+		<module>synthesizer</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<javasdk.version>1.7</javasdk.version>
+		<skipTests>true</skipTests>
+
+		<maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
+		<maven-dependency-plugin.version>3.0.1</maven-dependency-plugin.version>
+		<maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
+		<maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
+		<maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
+	</properties>
 
 	<build>
 		<pluginManagement>
@@ -15,20 +34,25 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven-compiler-plugin.version}</version>
 					<configuration>
 						<source>${javasdk.version}</source>
 						<target>${javasdk.version}</target>
 					</configuration>
 				</plugin>
-				
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-jar-plugin</artifactId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${maven-surefire-plugin.version}</version>
+					<configuration>
+						<skipTests>${skipTests}</skipTests>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
-	
+
 	<licenses>
 		<license>
 			<name>Apache License 2.0</name>
@@ -36,5 +60,5 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	
+
 </project>

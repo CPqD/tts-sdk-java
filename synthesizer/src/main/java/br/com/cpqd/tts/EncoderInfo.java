@@ -23,7 +23,6 @@ public class EncoderInfo
 
 	/**
 	 * Returns the encoder name.
-	 * @return
 	 */
 	public String getName()
 	{
