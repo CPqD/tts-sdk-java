@@ -6,7 +6,9 @@ Note que os programas de exemplo aqui apresentados não tem o objetivo de exerci
 
 Os seguintes exemplos estão disponíveis:
 
-* **SimpleSynthesis**: executa uma síntese síncrona utilizando a instalação do **CPqD Texto Fala** e o texto de entrada especificados. Uma síntese síncrona é aquela cujo o áudio é disponibilizado apenas no final do processamento (i.e. depois da chamada da função ``SynthesisSession.textToSpeech()``).
+* **SimpleSynthesis**: executa uma síntese síncrona utilizando a instalação do **CPqD Texto Fala** e o texto de entrada especificados. Uma síntese síncrona é aquela cujo o áudio é disponibilizado apenas no final do processamento (i.e. depois da chamada do método ``textToSpeech()`` da classe ``SynthesisSession``).
+
+* **StreamingSynthesis**: executa uam síntese via streaming utilizando uma instalação do **CPqD Texto Fala** e o texto de entrada especificados. Uma síntese via *streaming* entrega o áudio na medida em que a fala é sintetizada, acelerando o tempo de resposta da aplicação. Essa funcionalidade é implementada pelo método ``textToSpeechStream()`` da classe ``SynthesisSession``.
 
 ## Compilação
 
@@ -14,12 +16,12 @@ A complicação pode ser feita utilizando sua IDE preferida ou via linha de coma
 
 	# mvn clean package
 
-Será criado o arquivo ``cpqdtts-examples-4.1.0-SNAPSHOT.jar``.
+Será criado um arquivo JAR para cada programa de exemplo. O nome do arquivo JAR é composto pelo prefixo ``synthesizer-examples-4.1.0-SNAPSHOT-`` seguido de um identificador (``simple`` para **SimpleSynthesis** e ``streaming`` para **StreamingSynthesis**).
 
 ## Execução
 
-Para executar o exemplo **SimpleSynthesis**, utilize o comando abaixo:
+Para executar um exemplo, utilize um comando similar ao abaixo:
 
-	# java -cp "target/cpqdtts-examples-4.1.0-SNAPSHOT.jar" br.com.cpqd.example.SimpleSynthesis <productPath> <text or file name> 
+	# java -jar target/synthesizer-examples-4.1.0-SNAPSHOT-simple.jar <productPath> <text or file name> 
 	
 O primeiro argumento (``productPath``) é o caminho onde o CPqD Texto Fala está instalado. O segundo argumento é o texto UTF-8 a ser sintetizado ou o nome de um arquivo em disco contendo o texto (pode ser texto puro ou SSML).

@@ -1,6 +1,6 @@
 package br.com.cpqd.tts;
 
-public abstract class SynthesisListener
+public interface SynthesisListener
 {
 
 	public enum Order
@@ -9,7 +9,7 @@ public abstract class SynthesisListener
 		INTERMEDIATE,
 		LAST
 	};
-	
+
 	public abstract boolean receivedAudio(byte[] buffer, Order order,
 			Object object);
 

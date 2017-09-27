@@ -11,7 +11,7 @@
 
 	<artifactId>synthesizer-examples</artifactId>
 	<packaging>jar</packaging>
-	<name>CPqD Texto Fala examples for Java</name>
+	<name>CPqD TTS examples for Java</name>
 
 	<dependencies>
 		<dependency>
@@ -22,7 +22,6 @@
 	</dependencies>
 
 	<build>
-		<finalName>cpqdtts-examples-${project.version}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -32,10 +31,62 @@
 					<target>${javasdk.version}</target>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>default-jar</id>
+						<phase>none</phase>
+					</execution>
+					
+					<execution>
+						<id>simple</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<archive>
+								<manifest>
+									<addClasspath>true</addClasspath>
+									<classpathLayoutType>custom</classpathLayoutType>
+									<customClasspathLayout>${project.basedir}/../synthesizer/target/${cpqdtts.jar.name}.jar</customClasspathLayout>
+									<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+									<mainClass>br.com.cpqd.tts.examples.SimpleSynthesis</mainClass>
+								</manifest>
+							</archive>
+							<classifier>simple</classifier>
+							<includes>
+								<include>**/SimpleSynthesis**</include>
+							</includes>
+						</configuration>
+					</execution>
+
+					<execution>
+						<id>streaming</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<archive>
+								<manifest>
+									<addClasspath>true</addClasspath>
+									<classpathLayoutType>custom</classpathLayoutType>
+									<customClasspathLayout>${project.basedir}/../synthesizer/target/${cpqdtts.jar.name}.jar</customClasspathLayout>
+									<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+									<mainClass>br.com.cpqd.tts.examples.StreamingSynthesis</mainClass>
+								</manifest>
+							</archive>
+							<classifier>streaming</classifier>
+							<includes>
+								<include>**/StreamingSynthesis*</include>
+							</includes>
+						</configuration>
+					</execution>
+
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
