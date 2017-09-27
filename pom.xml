@@ -9,18 +9,18 @@
 	<version>4.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Java wrapper for CPqD Texto Fala</name>
+	<name>Java DSK for CPqD Texto Fala</name>
 	<description></description>
 
 	<modules>
 		<module>synthesizer</module>
+		<module>synthesizer-examples</module>
 	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<javasdk.version>1.7</javasdk.version>
 		<skipTests>true</skipTests>
-
 		<maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
 		<maven-dependency-plugin.version>3.0.1</maven-dependency-plugin.version>
 		<maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
@@ -48,6 +48,12 @@
 					<configuration>
 						<skipTests>${skipTests}</skipTests>
 					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${maven-jar-plugin.version}</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>

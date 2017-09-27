@@ -9,12 +9,20 @@
 		<version>4.1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>synthesizer</artifactId>
+	<artifactId>synthesizer-examples</artifactId>
 	<packaging>jar</packaging>
-	<name>CPqD TTS wrapper for Java</name>
+	<name>CPqD Texto Fala examples for Java</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>br.com.cpqd.tts</groupId>
+			<artifactId>synthesizer</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
 
 	<build>
-		<finalName>libcpqdtts-${project.version}</finalName>
+		<finalName>cpqdtts-examples-${project.version}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
