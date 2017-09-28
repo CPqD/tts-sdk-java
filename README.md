@@ -2,4 +2,19 @@
 
 O **CPqD Texto Fala** é um *framework* que permite converter texto genérico, como notícias ou diálogos, em fala. É possível integrar o CPqD Texto Fala nas mais variadas aplicações, desde aplicativos móveis até sistemas de diálogo para telefonia. 
 
-Este repositório contém o código fonte do pacote necessário para integrar a biblioteca dinâmica (Windows ou GNU/Linux) do **CPqD Texto Fala** em aplicações Java.
+Este repositório contém um projeto Maven contendo dois módulos. O módulo ``synthesizer`` contém o código fonte do pacote necessário para integrar a biblioteca dinâmica (Windows ou GNU/Linux) do **CPqD Texto Fala** em aplicações Java. Já o módulo ``synthesizer-examples`` contém programas de exemplo que demonstram algumas formas de utilizar o **CPqD Texto Fala**.
+
+## Instalação
+
+Baixe o conteúdo do repositório em seu computador usando o comando abaixo:
+
+	# git clone https://github.com/CPqD/tts-sdk-java.git
+
+A instalação do SDK pode ser feita utilizando sua IDE preferida ou via linha de comando usando o programa ``mvn``. A instalação é feita usando o *goal* ``install``.
+
+Para realizar a instalação via linha de comando, acesse o diretório onde o repositório foi clonado e use o comando abaixo:
+
+	# mvn clean install
+
+Será instalado em seu repositório local do Maven o arquivo JAR ``synthesizer-4.1.0-SNAPSHOT.jar``.
+

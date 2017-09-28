@@ -21,7 +21,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<javasdk.version>1.7</javasdk.version>
 		<skipTests>true</skipTests>
-		<cpqdtts.jar.name>libcpqdtts-${project.version}</cpqdtts.jar.name>
 		<maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
 		<maven-dependency-plugin.version>3.0.1</maven-dependency-plugin.version>
 		<maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>

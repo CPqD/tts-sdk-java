@@ -33,6 +33,16 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>default-install</id>
+						<phase>none</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<executions>
 					<execution>
@@ -50,8 +60,7 @@
 							<archive>
 								<manifest>
 									<addClasspath>true</addClasspath>
-									<classpathLayoutType>custom</classpathLayoutType>
-									<customClasspathLayout>${project.basedir}/../synthesizer/target/${cpqdtts.jar.name}.jar</customClasspathLayout>
+									<classpathPrefix>${project.basedir}/../synthesizer/target/</classpathPrefix>
 									<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 									<mainClass>br.com.cpqd.tts.examples.SimpleSynthesis</mainClass>
 								</manifest>
@@ -73,8 +82,7 @@
 							<archive>
 								<manifest>
 									<addClasspath>true</addClasspath>
-									<classpathLayoutType>custom</classpathLayoutType>
-									<customClasspathLayout>${project.basedir}/../synthesizer/target/${cpqdtts.jar.name}.jar</customClasspathLayout>
+									<classpathPrefix>${project.basedir}/../synthesizer/target/</classpathPrefix>
 									<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 									<mainClass>br.com.cpqd.tts.examples.StreamingSynthesis</mainClass>
 								</manifest>

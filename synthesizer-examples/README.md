@@ -1,6 +1,6 @@
 # Exemplos
 
-Esse projeto contém programas de exemplo que demonstram diferentes formas de uso do **CPqD Texto Fala**. Você pode utilizar esses programas como ponto de partida para o desenvolvimento de suas aplicações.
+Esse módulo contém programas de exemplo que demonstram diferentes formas de uso do **CPqD Texto Fala**. Você pode utilizar esses programas como ponto de partida para o desenvolvimento de suas aplicações.
 
 Note que os programas de exemplo aqui apresentados não tem o objetivo de exercitar todos os recursos oferecidos pelo produto.
 
@@ -20,8 +20,8 @@ Será criado um arquivo JAR para cada programa de exemplo. O nome do arquivo JAR
 
 ## Execução
 
-Para executar um exemplo, utilize um comando similar ao abaixo:
+Para executar um exemplo, utilize um comando similar ao abaixo, escolhendo o JAR correspondente ao programa que deseja executar.
 
 	# java -jar target/synthesizer-examples-4.1.0-SNAPSHOT-simple.jar <productPath> <text or file name> 
 	
-O primeiro argumento (``productPath``) é o caminho onde o CPqD Texto Fala está instalado. O segundo argumento é o texto UTF-8 a ser sintetizado ou o nome de um arquivo em disco contendo o texto (pode ser texto puro ou SSML).
+O primeiro argumento é o caminho onde o **CPqD Texto Fala** está instalado. O segundo argumento é o texto UTF-8 a ser sintetizado ou o nome de um arquivo em disco contendo o texto. O texto a ser sintetizado pode ser ser texto puro ou SSML.
