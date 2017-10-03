@@ -8,7 +8,7 @@ Os seguintes exemplos estão disponíveis:
 
 * **SimpleSynthesis**: executa uma síntese síncrona utilizando a instalação do **CPqD Texto Fala** e o texto de entrada especificados. Uma síntese síncrona é aquela cujo o áudio é disponibilizado apenas no final do processamento (i.e. depois da chamada do método ``textToSpeech()`` da classe ``SynthesisSession``).
 
-* **StreamingSynthesis**: executa uam síntese via streaming utilizando uma instalação do **CPqD Texto Fala** e o texto de entrada especificados. Uma síntese via *streaming* entrega o áudio na medida em que a fala é sintetizada, acelerando o tempo de resposta da aplicação. Essa funcionalidade é implementada pelo método ``textToSpeechStream()`` da classe ``SynthesisSession``.
+* **StreamingSynthesis**: executa uma síntese via streaming utilizando uma instalação do **CPqD Texto Fala** e o texto de entrada especificados. Uma síntese via *streaming* entrega o áudio na medida em que a fala é sintetizada, acelerando o tempo de resposta da aplicação. Essa funcionalidade é implementada pelo método ``textToSpeechStream()`` da classe ``SynthesisSession``.
 
 ## Compilação
 

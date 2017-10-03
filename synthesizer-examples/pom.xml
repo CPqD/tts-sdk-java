@@ -60,7 +60,7 @@
 							<archive>
 								<manifest>
 									<addClasspath>true</addClasspath>
-									<classpathPrefix>${project.basedir}/../synthesizer/target/</classpathPrefix>
+									<classpathPrefix>/${project.basedir}/../synthesizer/target/</classpathPrefix>
 									<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 									<mainClass>br.com.cpqd.tts.examples.SimpleSynthesis</mainClass>
 								</manifest>
@@ -82,7 +82,7 @@
 							<archive>
 								<manifest>
 									<addClasspath>true</addClasspath>
-									<classpathPrefix>${project.basedir}/../synthesizer/target/</classpathPrefix>
+									<classpathPrefix>/${project.basedir}/../synthesizer/target/</classpathPrefix>
 									<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 									<mainClass>br.com.cpqd.tts.examples.StreamingSynthesis</mainClass>
 								</manifest>

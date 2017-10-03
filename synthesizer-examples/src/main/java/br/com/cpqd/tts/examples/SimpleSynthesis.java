@@ -30,7 +30,7 @@ public class SimpleSynthesis
 			return;
 		}
 
-		boolean isWindows = System.getProperty("os.name").indexOf("win") >= 0;
+		boolean isWindows = System.getProperty("os.name").toLowerCase().indexOf("win") >= 0;
 
 		String libraryPath = args[0] + File.separator + "libcpqdtts.";
 		if (isWindows)
