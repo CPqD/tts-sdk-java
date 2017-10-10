@@ -37,17 +37,22 @@ public class SynthesisEngine
 	{
 		wrapper.unloadVoice(name);
 	}
+	
+	public void loadPlugin (String fileName) throws SynthesisException
+	{
+		wrapper.loadPlugin(fileName);
+	}
+	
+	public void unLoadPlugin (String fileName) throws SynthesisException
+	{
+		wrapper.unloadPlugin(fileName);
+	}
 
 	public EngineInfo getEngineInfo() throws SynthesisException
 	{
 		EngineInfo info = new EngineInfo();
 		wrapper.getEngineInfo(info);
 		return info;
-	}
-
-	public VoiceInfo getVoiceInfo(String voiceName) throws SynthesisException
-	{
-		return wrapper.getVoiceInfo(voiceName);
 	}
 
 	public VoiceInfo[] enumerateVoices() throws SynthesisException

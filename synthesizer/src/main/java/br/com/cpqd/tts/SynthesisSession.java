@@ -217,7 +217,10 @@ public class SynthesisSession
 	{
 		validate();
 
-		return engine.wrapper.getSessionInfo(handle);
+		SessionInfo info = new SessionInfo();
+		engine.wrapper.getSessionInfo(handle, info);
+		
+		return info;
 	}
 	
 	public String getVoiceName() throws SynthesisException

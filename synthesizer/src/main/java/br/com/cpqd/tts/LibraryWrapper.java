@@ -42,13 +42,9 @@ public class LibraryWrapper
 
 	protected native void saveAudio( long handle, String fileName ) throws SynthesisException;
 
-	protected native int getStatus( long handle ) throws SynthesisException;
-
 	protected native void getEngineInfo( EngineInfo info ) throws SynthesisException;
 
-	protected native VoiceInfo getVoiceInfo( String voiceName ) throws SynthesisException;
-
-	protected native SessionInfo getSessionInfo( long handle ) throws SynthesisException;
+	protected native void getSessionInfo( long handle, SessionInfo info ) throws SynthesisException;
 
 	protected native void setBooleanParameter( long handle, int option, boolean value ) throws SynthesisException;
 
