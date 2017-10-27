@@ -1,0 +1,10 @@
+.classpath
+.project
+.settings
+/bin/
+/build/
+/*.log
+/*.wav
+/synthesizer-examples/target/*
+/synthesizer/target/*
+

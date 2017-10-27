@@ -18,3 +18,7 @@ Para realizar a instalação via linha de comando, acesse o diretório onde o re
 
 Será instalado em seu repositório local do Maven o arquivo JAR ``synthesizer-4.1.0-SNAPSHOT.jar``.
 
+## Documentação
+
+A documentação de como utilizar o **CPqD Texto Fala** em uma aplicação Java está disponível em: https://speechweb.cpqd.com.br/tts/docs/4.1/
+
