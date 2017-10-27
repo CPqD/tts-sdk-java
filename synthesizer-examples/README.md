@@ -12,7 +12,7 @@ Os seguintes exemplos estão disponíveis:
 
 ## Compilação
 
-A complicação pode ser feita utilizando sua IDE preferida ou via linha de comando usando o programa ``mvn``:
+A compilação pode ser feita utilizando sua IDE preferida ou via linha de comando usando o programa ``mvn``:
 
 	# mvn clean package
 
