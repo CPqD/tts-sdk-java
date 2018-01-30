@@ -41,13 +41,6 @@ public class SimpleSynthesis
 		// initialize the CPqD TTS engine
 		SynthesisEngine engine = new SynthesisEngine(libraryPath, args[0], null);
 
-		// print some engine information
-		EngineInfo engineInfo = engine.getEngineInfo();
-		System.out.println("CPqD Texto Fala " + engineInfo.getVersion());
-		System.out.println("Max sessions: " + engineInfo.getMaxSessions());
-		System.out.println("    Customer: " + engineInfo.getCustomerName());
-		System.out.println();
-
 		// the second argument can be an file name or an UTF-8 text
 		String text;
 		File file = new File(args[1]);
@@ -79,6 +72,14 @@ public class SimpleSynthesis
 		session.saveAudio("SimpleSynthesis.wav");
 		System.out.println();
 		System.out.println("Audio saved to 'SimpleSynthesis.wav'");
+		
+		// print some engine information
+		EngineInfo engineInfo = engine.getEngineInfo();
+		System.out.println("CPqD Texto Fala   " + engineInfo.getVersion());
+		System.out.println("Max sessions:     " + engineInfo.getMaxSessions());
+		System.out.println("    Customer:     " + engineInfo.getCustomerName());
+		System.out.println("Current sessions: " + engineInfo.getCurrentSessions());
+		System.out.println();
 
 		// always release the session when it was no longer necessary
 		session.release();

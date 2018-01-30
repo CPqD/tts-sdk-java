@@ -10,6 +10,8 @@ public class EngineInfo
 	private String customerName;
 
 	private int capabilities;
+	
+	private int currentSessions;
 
 	protected EngineInfo()
 	{
@@ -44,13 +46,16 @@ public class EngineInfo
 	{
 		return capabilities;
 	}
+	
+	public int getCurrentSessions()
+	{
+		return currentSessions;
+	}
 
 	@Override
-	public String toString()
-	{
-		return "EngineInfo [version='" + version + "', maxSessions='"
-				+ maxSessions + "', customerName='" + customerName
-				+ "', capabilities='" + capabilities + "']";
+	public String toString() {
+		return "EngineInfo [version=" + version + ", maxSessions=" + maxSessions + ", customerName=" + customerName
+				+ ", capabilities=" + capabilities + ", currentSessions=" + currentSessions + "]";
 	}
 
 }
