@@ -16,7 +16,7 @@ Para realizar a instalação via linha de comando, acesse o diretório onde o re
 
 	# mvn clean install
 
-Será instalado em seu repositório local do Maven o arquivo JAR ``synthesizer-4.1.0-SNAPSHOT.jar``.
+Será instalado em seu repositório local do Maven o arquivo JAR ``synthesizer-4.2.0-SNAPSHOT.jar``.
 
 ## Documentação
 
