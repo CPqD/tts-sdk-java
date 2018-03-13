@@ -20,5 +20,8 @@ Será instalado em seu repositório local do Maven o arquivo JAR ``synthesizer-4
 
 ## Documentação
 
-A documentação de como utilizar o **CPqD Texto Fala** em uma aplicação Java está disponível em: https://speechweb.cpqd.com.br/tts/docs/4.1/
+A documentação de como utilizar o **CPqD Texto Fala** em uma aplicação Java está disponível em: https://speechweb.cpqd.com.br/tts/docs/4.2/
 
+## Releases
+
+Como boa prática, deve-se fazer o uso de versões estáveis, presentes em: https://github.com/CPqD/tts-sdk-java/releases
