@@ -10,8 +10,16 @@ public class EngineInfo
 	private String customerName;
 
 	private int capabilities;
-	
+
 	private int currentSessions;
+
+	private int operationState;
+
+	private int communicationErrors;
+
+	private long synthesisCount;
+
+	private long synthesisTime;
 
 	protected EngineInfo()
 	{
@@ -46,16 +54,88 @@ public class EngineInfo
 	{
 		return capabilities;
 	}
-	
+
+	/**
+     * Maximum number of synthesis sessions that currently exists.
+     */
 	public int getCurrentSessions()
 	{
 		return currentSessions;
 	}
 
+    /**
+     * State in which the TTS engine is operating.
+     */
+	public OperationState getOperationState()
+	{
+		return OperationState.from(operationState);
+	}
+
+	/**
+     * Number of communication errors.
+     */
+	public int getCommunicationErrors()
+	{
+		return communicationErrors;
+	}
+
+    /**
+    * Amount of speech synthesis performed.
+    */
+	public long getSynthesisCount()
+	{
+		return synthesisCount;
+	}
+
+	/**
+     * Amount of milliseconds of speech synthesized.
+     */
+	public long getSynthesisTime()
+	{
+		return synthesisTime;
+	}
+
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return "EngineInfo [version=" + version + ", maxSessions=" + maxSessions + ", customerName=" + customerName
 				+ ", capabilities=" + capabilities + ", currentSessions=" + currentSessions + "]";
+	}
+
+	public static enum OperationState
+	{
+
+		ONLINE(1),
+
+		OFFLINE(2),
+
+		BLOCKED(3),
+
+		UNKNOWN(4);
+
+		private int value;
+
+		private OperationState( int value )
+		{
+			this.value = value;
+		}
+
+		public int getValue()
+		{
+			return value;
+		}
+
+		public static OperationState from( int value )
+		{
+			switch (value)
+			{
+				case 1  : return ONLINE;
+				case 2  : return OFFLINE;
+				case 3  : return BLOCKED;
+				default : return UNKNOWN;
+			}
+		}
+
 	}
 
 }
