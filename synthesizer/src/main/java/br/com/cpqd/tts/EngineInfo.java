@@ -15,6 +15,8 @@ public class EngineInfo
 
 	private int operationState;
 
+	private long remainingTime;
+
 	private int communicationErrors;
 
 	private long synthesisCount;
@@ -69,6 +71,17 @@ public class EngineInfo
 	public OperationState getOperationState()
 	{
 		return OperationState.from(operationState);
+	}
+
+	/**
+	 * Remaining time until the product is blocked.
+	 *
+	 * Time in milliseconds if in ONLINE or OFFLINE state; zero if in BLOCKED state.
+	 * In ONLINE state the time never decrease.
+	 */
+	public long getRemainingTime()
+	{
+		return remainingTime;
 	}
 
 	/**

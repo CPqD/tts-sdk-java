@@ -75,7 +75,7 @@ public class SimpleSynthesis
 
 		// always release the session when it was no longer necessary
 		session.release();
-		
+
 		// print some engine information
 		EngineInfo engineInfo = engine.getEngineInfo();
 		System.out.println("CPqD Texto Fala   " + engineInfo.getVersion());
@@ -83,10 +83,11 @@ public class SimpleSynthesis
 		System.out.println("            Customer: " + engineInfo.getCustomerName());
 		System.out.println("    Current sessions: " + engineInfo.getCurrentSessions());
 		System.out.println("     Operation state: " + engineInfo.getOperationState());
+		System.out.println("      Remaining time: " + engineInfo.getRemainingTime());
 		System.out.println("Communication errors: " + engineInfo.getCommunicationErrors());
 		System.out.println("     Synthesis count: " + engineInfo.getSynthesisCount());
 		System.out.println("      Synthesis time: " + engineInfo.getSynthesisTime());
-		
+
 		System.out.println();
 	}
 
