@@ -12,7 +12,7 @@ public class SynthesisEngine
 	{
 		this(fileName, productPath, logPath, null);
 	}
-	
+
 	public SynthesisEngine(String fileName, String productPath, String logPath, Object extra)
 			throws SynthesisException, IOException
 	{
@@ -26,7 +26,7 @@ public class SynthesisEngine
 		long handle = wrapper.createSession(voiceName);
 		return new SynthesisSession(this, handle);
 	}
-	
+
 	public void loadVoice(String fileName)
 			throws SynthesisException
 	{
@@ -37,12 +37,12 @@ public class SynthesisEngine
 	{
 		wrapper.unloadVoice(name);
 	}
-	
+
 	public void loadPlugin (String fileName) throws SynthesisException
 	{
 		wrapper.loadPlugin(fileName);
 	}
-	
+
 	public void unLoadPlugin (String fileName) throws SynthesisException
 	{
 		wrapper.unloadPlugin(fileName);
@@ -64,5 +64,9 @@ public class SynthesisEngine
 	{
 		return wrapper.enumerateEncoders();
 	}
-	
+
+	public void terminate() throws SynthesisException
+	{
+		wrapper.terminate();
+	}
 }

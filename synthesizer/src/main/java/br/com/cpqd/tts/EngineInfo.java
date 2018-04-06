@@ -23,6 +23,8 @@ public class EngineInfo
 
 	private long synthesisTime;
 
+	private String licenseServerURI;
+
 	protected EngineInfo()
 	{
 		version = new VersionInfo();
@@ -107,6 +109,16 @@ public class EngineInfo
 	{
 		return synthesisTime;
 	}
+
+	/**
+	 * URL to the current license server.
+	 * @return
+	 */
+	public String getLicenseServerURI()
+	{
+		return licenseServerURI;
+	}
+
 
 	@Override
 	public String toString()
