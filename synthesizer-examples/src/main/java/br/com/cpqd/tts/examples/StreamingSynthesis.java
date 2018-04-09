@@ -55,45 +55,53 @@ public class StreamingSynthesis
 		else
 			text = args[1];
 
-		// create a synthesis session using the default voice
-		SynthesisSession session = engine.createSession(null);
-		// make sure we're using "wav/16000/16/1" encoder (Waveform 16kHz 16bps mono)
-		session.setEncoderName("wav/16000/16/1");
+		try {
+			// create a synthesis session using the default voice
+			SynthesisSession session = engine.createSession(null);
+			// make sure we're using "wav/16000/16/1" encoder (Waveform 16kHz 16bps mono)
+			session.setEncoderName("wav/16000/16/1");
 
-		// synthesize the input text
-		System.out.println("Synthesizing text...");
-		MyListener listener = new MyListener();
-		session.textToSpeechStream(text, listener, null);
+			// synthesize the input text
+			System.out.println("Synthesizing text...");
+			MyListener listener = new MyListener();
+			session.textToSpeechStream(text, listener, null);
 
-		// show some information about the generated audio
-		AudioInfo audioInfo = session.getAudioInfo();
-		System.out.println();
-		System.out.println( "    Sample rate: " + audioInfo.getSampleRate());
-		System.out.println( "Bits per sample: " + audioInfo.getBitsPerSample());
-		System.out.println( "       Channels: " + audioInfo.getChannels());
-		System.out.println( " Audio duration: " + audioInfo.getDuration() + " ms");
-		System.out.println( "    Data length: " + audioInfo.getLength() + " bytes");
+			// show some information about the generated audio
+			AudioInfo audioInfo = session.getAudioInfo();
+			System.out.println();
+			System.out.println( "    Sample rate: " + audioInfo.getSampleRate());
+			System.out.println( "Bits per sample: " + audioInfo.getBitsPerSample());
+			System.out.println( "       Channels: " + audioInfo.getChannels());
+			System.out.println( " Audio duration: " + audioInfo.getDuration() + " ms");
+			System.out.println( "    Data length: " + audioInfo.getLength() + " bytes");
 
-		// the generated audio is stored in the session memory and can be saved to disk
-		session.saveAudio("StreamingSynthesis.wav");
-		System.out.println();
-		System.out.println("Audio saved to 'StreamingSynthesis.wav'");
+			// the generated audio is stored in the session memory and can be saved to disk
+			session.saveAudio("StreamingSynthesis.wav");
+			System.out.println();
+			System.out.println("Audio saved to 'StreamingSynthesis.wav'");
 
-		// always release the session when it was no longer necessary
-		session.release();
+			// always release the session when it was no longer necessary
+			session.release();
 
-		// print some engine information
-		EngineInfo engineInfo = engine.getEngineInfo();
-		System.out.println("CPqD Texto Fala   " + engineInfo.getVersion());
-		System.out.println("        Max sessions: " + engineInfo.getMaxSessions());
-		System.out.println("            Customer: " + engineInfo.getCustomerName());
-		System.out.println("    Current sessions: " + engineInfo.getCurrentSessions());
-		System.out.println("     Operation state: " + engineInfo.getOperationState());
-		System.out.println("      Remaining time: " + engineInfo.getRemainingTime());
-		System.out.println("Communication errors: " + engineInfo.getCommunicationErrors());
-		System.out.println("     Synthesis count: " + engineInfo.getSynthesisCount());
-		System.out.println("      Synthesis time: " + engineInfo.getSynthesisTime());
-		System.out.println();
+			// print some engine information
+			EngineInfo engineInfo = engine.getEngineInfo();
+			System.out.println("CPqD Texto Fala   " + engineInfo.getVersion());
+			System.out.println("        Max sessions: " + engineInfo.getMaxSessions());
+			System.out.println("            Customer: " + engineInfo.getCustomerName());
+			System.out.println("    Current sessions: " + engineInfo.getCurrentSessions());
+			System.out.println("     Operation state: " + engineInfo.getOperationState());
+			System.out.println("      Remaining time: " + engineInfo.getRemainingTime());
+			System.out.println("Communication errors: " + engineInfo.getCommunicationErrors());
+			System.out.println("     Synthesis count: " + engineInfo.getSynthesisCount());
+			System.out.println("      Synthesis time: " + engineInfo.getSynthesisTime());
+			System.out.println("      License server: " + engineInfo.getLicenseServerURI());
+			System.out.println();
+		} catch (SynthesisException ex)
+		{
+			System.out.println(ex);
+		}
+
+		engine.terminate();
 	}
 
 	public static class MyListener implements SynthesisListener
