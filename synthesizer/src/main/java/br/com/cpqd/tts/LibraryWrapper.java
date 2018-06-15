@@ -66,14 +66,14 @@ public class LibraryWrapper
 
 	protected native EncoderInfo[] enumerateEncoders( ) throws SynthesisException;
 	
-	protected native void registerTemplate (String name, String content, Object data) throws SynthesisException;
+	protected native void registerTemplate (String name, String content) throws SynthesisException;
 	
-	protected native void loadTemplate (String fileName, Object data) throws SynthesisException;
+	protected native void loadTemplate (String fileName) throws SynthesisException;
 	
 	protected native void registerInterpretation( String name, String format, Object listener, Object data, boolean isNormalized ) throws SynthesisException;
 	
-	protected native String processMessage (String message, Object data) throws SynthesisException;
+	protected native String processMessage (String message) throws SynthesisException;
 	
-	protected native void validateSSML (String ssml, Object data) throws SynthesisException;
+	protected native void validateSSML (String ssml) throws SynthesisException;
 
 }

@@ -65,14 +65,14 @@ public class SynthesisEngine
 		return wrapper.enumerateEncoders();
 	}
 	
-	public void registerTemplate (String name, String content, Object data) throws SynthesisException
+	public void registerTemplate (String name, String content) throws SynthesisException
 	{
-		wrapper.registerTemplate(name, content, data);
+		wrapper.registerTemplate(name, content);
 	}
 	
-	public void loadTemplate (String fileName, Object data) throws SynthesisException
+	public void loadTemplate (String fileName) throws SynthesisException
 	{
-		wrapper.loadTemplate(fileName, data);
+		wrapper.loadTemplate(fileName);
 	}
 	
 	public void registerInterpretation( String name, String format, InterpretedListener listener, Object data, boolean isNormalized ) throws SynthesisException
@@ -80,14 +80,14 @@ public class SynthesisEngine
 		wrapper.registerInterpretation(name, format, listener, data, isNormalized);
 	}
 	
-	public String processMessage (String message, Object data) throws SynthesisException
+	public String processMessage (String message) throws SynthesisException
 	{
-		return wrapper.processMessage(message, data);
+		return wrapper.processMessage(message);
 	}
 	
-	public void validateSSML (String ssml, Object data) throws SynthesisException
+	public void validateSSML (String ssml) throws SynthesisException
 	{
-		wrapper.validateSSML(ssml, data);
+		wrapper.validateSSML(ssml);
 	}
 
 	public void terminate() throws SynthesisException
