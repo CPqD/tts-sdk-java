@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>br.com.cpqd.tts</groupId>
 		<artifactId>synthesizer-parent</artifactId>
-		<version>4.2-SNAPSHOT</version>
+		<version>4.3-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>synthesizer-examples</artifactId>

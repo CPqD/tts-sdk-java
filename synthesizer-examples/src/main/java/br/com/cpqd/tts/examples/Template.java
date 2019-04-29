@@ -9,7 +9,6 @@ import java.nio.file.Paths;
 import br.com.cpqd.tts.InterpretedListener;
 import br.com.cpqd.tts.SynthesisEngine;
 import br.com.cpqd.tts.SynthesisException;
-import br.com.cpqd.tts.SynthesisListener;
 
 public class Template
 {
@@ -24,7 +23,7 @@ public class Template
 	{
 		if (args.length != 3)
 		{
-			System.out.println("Usage: java -jar libcpqdtts-4.1.0.jar <product path> <template path> <message>");
+			System.out.println("Usage: java -jar libcpqdtts-4.x.jar <product path> <template path> <message>");
 			return;
 		}
 
@@ -35,11 +34,13 @@ public class Template
 			libraryPath += "dll";
 		else
 			libraryPath += "so";
-
-		// initialize the CPqD TTS engine
-		SynthesisEngine engine = new SynthesisEngine(libraryPath, args[0], null);
+		
+		SynthesisEngine engine = null;
 
 		try {
+			
+			// initialize the CPqD TTS engine
+			engine = new SynthesisEngine(libraryPath, args[0], null);
 			
 			engine.loadTemplate(args[1]);
 			
@@ -64,8 +65,6 @@ public class Template
 			System.out.println();
 			System.out.println("SSML valido");
 
-			
-			System.out.println();
 		} catch (SynthesisException ex)
 		{
 			System.out.println(ex);
@@ -74,8 +73,10 @@ public class Template
 		engine.terminate();
 	}
 	
+	
 	public static class MyCallback implements InterpretedListener
 	{
+		
 		@Override
 		public String callback(String input, Object data) {
 			return "meu teste";
