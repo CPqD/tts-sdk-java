@@ -75,6 +75,11 @@ public class SynthesisEngine
 		wrapper.loadTemplate(fileName);
 	}
 	
+	public void unloadTemplate (String fileName) throws SynthesisException
+	{
+		wrapper.unloadTemplate(fileName);
+	}
+	
 	public void registerInterpretation( String name, String format, InterpretedListener listener, Object data, boolean isNormalized ) throws SynthesisException
 	{
 		wrapper.registerInterpretation(name, format, listener, data, isNormalized);

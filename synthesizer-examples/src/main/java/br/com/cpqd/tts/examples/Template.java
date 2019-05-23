@@ -64,6 +64,8 @@ public class Template
 			engine.validateSSML(ssml);
 			System.out.println();
 			System.out.println("SSML valido");
+			
+			engine.unloadTemplate(args[1]);
 
 		} catch (SynthesisException ex)
 		{
