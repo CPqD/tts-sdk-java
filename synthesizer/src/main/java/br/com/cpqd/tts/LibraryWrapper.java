@@ -74,7 +74,7 @@ public class LibraryWrapper
 	
 	protected native void registerInterpretation( String name, String format, Object listener, Object data, boolean isNormalized ) throws SynthesisException;
 	
-	protected native String processMessage (String message) throws SynthesisException;
+	protected native String processMessage (String message, int flags) throws SynthesisException;
 	
 	protected native void validateSSML (String ssml) throws SynthesisException;
 

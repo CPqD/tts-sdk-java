@@ -85,9 +85,9 @@ public class SynthesisEngine
 		wrapper.registerInterpretation(name, format, listener, data, isNormalized);
 	}
 	
-	public String processMessage (String message) throws SynthesisException
+	public String processMessage (String message, int flags) throws SynthesisException
 	{
-		return wrapper.processMessage(message);
+		return wrapper.processMessage(message, flags);
 	}
 	
 	public void validateSSML (String ssml) throws SynthesisException

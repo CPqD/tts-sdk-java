@@ -58,7 +58,7 @@ public class Template
 				engine.terminate();
 				return;
 			}
-			String ssml = engine.processMessage(text);
+			String ssml = engine.processMessage(text, 0);
 			System.out.println(ssml);
 			
 			engine.validateSSML(ssml);
