@@ -1,18 +1,22 @@
 package br.com.cpqd.tts;
 
-public interface InterpretedListener
+public abstract class InterpretedListener
 {
-
+	private InterpretedListenerData listenerData;	
+	
+	
+	public InterpretedListener() {
+		listenerData = null;
+	}
+	
+	public InterpretedListener (String name, String format, boolean toNormalize, Object data) {
+		listenerData = new InterpretedListenerData(name, format, toNormalize, data);
+	}
+	
+	public InterpretedListenerData getListenerData() {
+		return listenerData;
+	}
+	
 	public abstract String callback(String input, Object data);
-	
-	//public abstract void callback(Object context, String input, InterpretedOutputListener output, Object data);
 
-	public abstract String getName();
-	
-	public abstract String getFormat();
-	
-	public abstract Object getData();
-	
-	public abstract boolean isNormalized();
-	
 }

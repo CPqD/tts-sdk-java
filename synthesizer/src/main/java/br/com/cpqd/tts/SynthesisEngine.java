@@ -80,9 +80,9 @@ public class SynthesisEngine
 		wrapper.unloadTemplate(fileName);
 	}
 	
-	public void registerInterpretation( String name, String format, InterpretedListener listener, Object data, boolean isNormalized ) throws SynthesisException
+	public void registerInterpretation( InterpretedListener listener) throws SynthesisException
 	{
-		wrapper.registerInterpretation(name, format, listener, data, isNormalized);
+		wrapper.registerInterpretation(listener);
 	}
 	
 	public String processMessage (String message, int flags) throws SynthesisException

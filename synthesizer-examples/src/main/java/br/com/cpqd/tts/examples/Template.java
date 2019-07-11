@@ -44,8 +44,8 @@ public class Template
 			
 			engine.loadTemplate(args[1]);
 			
-			MyCallback myCallback = new MyCallback();
-			engine.registerInterpretation("user:teste", "nossa", myCallback, null, true);
+			MyCallback myCallback = new MyCallback("user:interpret", "format", true, null);
+			engine.registerInterpretation( myCallback);
 			
 			// the third argument is message
 			String text;
@@ -76,13 +76,18 @@ public class Template
 	}
 	
 	
-	public static class MyCallback implements InterpretedListener
+	public static class MyCallback extends InterpretedListener
 	{
+		MyCallback(String name, String format, boolean toNormalize, Object data) {
+			super(name, format, toNormalize, data);
+		}
+		
 		
 		@Override
 		public String callback(String input, Object data) {
 			return "meu teste";
 		}
+		
 	}
 
 }

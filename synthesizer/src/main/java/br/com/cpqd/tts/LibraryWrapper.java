@@ -72,7 +72,7 @@ public class LibraryWrapper
 	
 	protected native void unloadTemplate (String fileName) throws SynthesisException;
 	
-	protected native void registerInterpretation( String name, String format, Object listener, Object data, boolean isNormalized ) throws SynthesisException;
+	protected native void registerInterpretation(Object listener) throws SynthesisException;
 	
 	protected native String processMessage (String message, int flags) throws SynthesisException;
 	
