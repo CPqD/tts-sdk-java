@@ -94,6 +94,28 @@
 							</includes>
 						</configuration>
 					</execution>
+					
+					<execution>
+						<id>template</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<archive>
+								<manifest>
+									<addClasspath>true</addClasspath>
+									<classpathPrefix>lib/</classpathPrefix>
+									<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+									<mainClass>br.com.cpqd.tts.examples.Template</mainClass>
+								</manifest>
+							</archive>
+							<classifier>template</classifier>
+							<includes>
+								<include>**/Template*</include>
+							</includes>
+						</configuration>
+					</execution>
 
 				</executions>
 			</plugin>
