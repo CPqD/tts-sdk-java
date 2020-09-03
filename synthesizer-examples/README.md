@@ -16,17 +16,17 @@ Os seguintes exemplos estão disponíveis:
 
 A compilação dos exemplos é feita seguindo os passos descritos no ``README.md`` da raiz do projeto. Os exemplos compilados estarão disponíveis no diretório ``target`` desse módulo (``synthesizer-examples/target`` a partir da raiz do projeto). Dentro do diretório ``target`` estarão os arquivos:
 
-* synthesizer-examples-4.4-V1-simple.jar
-* synthesizer-examples-4.4-V1-streaming.jar
-* synthesizer-examples-4.4-SNAPSHOT-template.jar
-* lib/synthesizer-4.4-V1.jar
+* synthesizer-examples-4.5-V1-simple.jar
+* synthesizer-examples-4.5-V1-streaming.jar
+* synthesizer-examples-4.5-SNAPSHOT-template.jar
+* lib/synthesizer-4.5-V1.jar
 
 ## Execução
 
 Para executar um exemplo, utilize um comando similar ao abaixo, escolhendo o JAR correspondente ao programa que deseja executar.
 
-	# java -jar target/synthesizer-examples-4.4-V1-simple.jar <productPath> <text or file name> 
+	# java -jar target/synthesizer-examples-4.5-V1-simple.jar <productPath> <text or file name> 
 
 O primeiro argumento é o caminho onde o **CPqD Texto Fala** está instalado. O segundo argumento é o texto UTF-8 a ser sintetizado ou o nome de um arquivo em disco contendo o texto. O texto a ser sintetizado pode estar em SSML.
 
-**Importante**: os programas de exemplo esperam que o arquivo ``synthesizer-4.4-V1.jar`` esteja dentro do diretório ``lib`` a partir de onde o JAR do exemplo encontra-se.
+**Importante**: os programas de exemplo esperam que o arquivo ``synthesizer-4.5-V1.jar`` esteja dentro do diretório ``lib`` a partir de onde o JAR do exemplo encontra-se.

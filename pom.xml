@@ -6,7 +6,7 @@
 
 	<groupId>br.com.cpqd.tts</groupId>
 	<artifactId>synthesizer-parent</artifactId>
-	<version>4.4-SNAPSHOT</version>
+	<version>4.5-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Java SDK for CPqD TTS</name>

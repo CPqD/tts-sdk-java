@@ -15,7 +15,7 @@ Como boa prática, deve-se fazer o uso de versões estáveis, presentes em: http
 Baixe o conteúdo do repositório em seu computador e crie um *branch* local apontando para a *tag* **v4.4-V1**:
 
 	# git clone https://github.com/CPqD/tts-sdk-java.git
-	# git checkout -B v4.4-V1 tags/v4.4-V1
+	# git checkout -B v4.5-V1 tags/v4.5-V1
 
 A compilação e instalação do SDK pode ser feita utilizando sua IDE preferida ou via linha de comando usando o programa ``mvn``. A instalação é feita usando o *goal* ``install``.
 
@@ -23,7 +23,7 @@ Para realizar a instalação via linha de comando, acesse o diretório onde o re
 
 	# mvn clean install
 
-Será instalado em seu repositório local do Maven o arquivo JAR ``synthesizer-4.4-V1.jar``. Você também encontrará esse arquivo no diretório ``synthesizer/target``, além dos exemplos compilados em ``synthesizer-examples/target``.
+Será instalado em seu repositório local do Maven o arquivo JAR ``synthesizer-4.5-V1.jar``. Você também encontrará esse arquivo no diretório ``synthesizer/target``, além dos exemplos compilados em ``synthesizer-examples/target``.
 
 ## Exemplos
 
@@ -31,5 +31,5 @@ Para maiores detalhes sobre como executar os programas de exemplo, consulte o t�
 
 ## Documentação
 
-A documentação de como utilizar o **CPqD Texto Fala** em uma aplicação Java está disponível em: https://speechweb.cpqd.com.br/tts/docs/4.4/
+Veja a documentação de como utilizar o **CPqD Texto Fala** em uma [aplicação C.](https://speechweb.cpqd.com.br/tts/docs/latest/ProgrammingGuide/Java/Index.html)
 
