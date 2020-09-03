@@ -65,17 +65,5 @@ public class LibraryWrapper
 	protected native VoiceInfo[] enumerateVoices( ) throws SynthesisException;
 
 	protected native EncoderInfo[] enumerateEncoders( ) throws SynthesisException;
-	
-	protected native void registerTemplate (String name, String content) throws SynthesisException;
-	
-	protected native void loadTemplate (String fileName) throws SynthesisException;
-	
-	protected native void unloadTemplate (String fileName) throws SynthesisException;
-	
-	protected native void registerInterpretation(Object listener) throws SynthesisException;
-	
-	protected native String processMessage (String message, int flags) throws SynthesisException;
-	
-	protected native void validateSSML (String ssml) throws SynthesisException;
 
 }

@@ -10,7 +10,6 @@ Os seguintes exemplos estão disponíveis:
 
 * **StreamingSynthesis**: executa uma síntese via streaming utilizando uma instalação do **CPqD Texto Fala** e o texto de entrada especificados. Uma síntese via *streaming* entrega o áudio na medida em que a fala é sintetizada, acelerando o tempo de resposta da aplicação. Essa funcionalidade é implementada pelo método ``textToSpeechStream()`` da classe ``SynthesisSession``.
 
-* **Template**: executa o carregamento, processamento e validação de um template utilizando a instalação do **CPqD Texto Fala**.
 
 ## Compilação
 
@@ -18,7 +17,6 @@ A compilação dos exemplos é feita seguindo os passos descritos no ``README.md
 
 * synthesizer-examples-4.5-V1-simple.jar
 * synthesizer-examples-4.5-V1-streaming.jar
-* synthesizer-examples-4.5-SNAPSHOT-template.jar
 * lib/synthesizer-4.5-V1.jar
 
 ## Execução

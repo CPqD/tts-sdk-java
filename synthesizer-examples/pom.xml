@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>br.com.cpqd.tts</groupId>
 		<artifactId>synthesizer-parent</artifactId>
-		<version>4.5-SNAPSHOT</version>
+		<version>4.5-V1</version>
 	</parent>
 
 	<artifactId>synthesizer-examples</artifactId>
@@ -91,28 +91,6 @@
 							<classifier>streaming</classifier>
 							<includes>
 								<include>**/StreamingSynthesis*</include>
-							</includes>
-						</configuration>
-					</execution>
-					
-					<execution>
-						<id>template</id>
-						<phase>package</phase>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-						<configuration>
-							<archive>
-								<manifest>
-									<addClasspath>true</addClasspath>
-									<classpathPrefix>lib/</classpathPrefix>
-									<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-									<mainClass>br.com.cpqd.tts.examples.Template</mainClass>
-								</manifest>
-							</archive>
-							<classifier>template</classifier>
-							<includes>
-								<include>**/Template*</include>
 							</includes>
 						</configuration>
 					</execution>

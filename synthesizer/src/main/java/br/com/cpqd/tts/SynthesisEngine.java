@@ -64,36 +64,6 @@ public class SynthesisEngine
 	{
 		return wrapper.enumerateEncoders();
 	}
-	
-	public void registerTemplate (String name, String content) throws SynthesisException
-	{
-		wrapper.registerTemplate(name, content);
-	}
-	
-	public void loadTemplate (String fileName) throws SynthesisException
-	{
-		wrapper.loadTemplate(fileName);
-	}
-	
-	public void unloadTemplate (String fileName) throws SynthesisException
-	{
-		wrapper.unloadTemplate(fileName);
-	}
-	
-	public void registerInterpretation( InterpretedListener listener) throws SynthesisException
-	{
-		wrapper.registerInterpretation(listener);
-	}
-	
-	public String processMessage (String message, int flags) throws SynthesisException
-	{
-		return wrapper.processMessage(message, flags);
-	}
-	
-	public void validateSSML (String ssml) throws SynthesisException
-	{
-		wrapper.validateSSML(ssml);
-	}
 
 	public void terminate() throws SynthesisException
 	{
