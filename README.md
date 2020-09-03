@@ -31,5 +31,5 @@ Para maiores detalhes sobre como executar os programas de exemplo, consulte o t�
 
 ## Documentação
 
-Veja a documentação de como utilizar o **CPqD Texto Fala** em uma [aplicação C.](https://speechweb.cpqd.com.br/tts/docs/latest/ProgrammingGuide/Java/Index.html)
+Veja a documentação de como utilizar o **CPqD Texto Fala** em uma [aplicação Java.](https://speechweb.cpqd.com.br/tts/docs/latest/ProgrammingGuide/Java/Index.html)
 
