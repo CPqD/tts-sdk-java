@@ -82,6 +82,8 @@ public class VoiceInfo
 	private int gender;
 
 	private int flags;
+	
+	private String language;
 
 	protected VoiceInfo()
 	{
@@ -146,13 +148,24 @@ public class VoiceInfo
 	{
 		return flags;
 	}
+	
+	/**
+	 * Return the voice language.
+	 */
+	public String getLanguage()
+	{
+		return language;
+	}
+	
+	
 
 	@Override
 	public String toString()
 	{
 		return "VoiceInfo [name=" + name + ", fileName=" + fileName
 				+ ", fileSize=" + fileSize + ", memorySize=" + memorySize
-				+ ", age=" + getAge() + ", gender=" + getGender() + ", flags=" + flags + "]";
+				+ ", age=" + getAge() + ", gender=" + getGender() + ", flags=" + flags
+				+ ", language=" + language + "]";
 	}
 
 }
