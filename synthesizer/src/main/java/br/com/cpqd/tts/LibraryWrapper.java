@@ -66,7 +66,7 @@ public class LibraryWrapper
 
 	protected native EncoderInfo[] enumerateEncoders( ) throws SynthesisException;
 	
-	protected native void registerTemplate (String name, String content) throws SynthesisException;
+	protected native void loadTemplateFromString (String name, String content) throws SynthesisException;
 	
 	protected native void loadTemplate (String fileName) throws SynthesisException;
 	

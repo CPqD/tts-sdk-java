@@ -65,9 +65,9 @@ public class SynthesisEngine
 		return wrapper.enumerateEncoders();
 	}
 	
-	public void registerTemplate (String name, String content) throws SynthesisException
+	public void loadTemplateFromString (String name, String content) throws SynthesisException
 	{
-		wrapper.registerTemplate(name, content);
+		wrapper.loadTemplateFromString(name, content);
 	}
 	
 	public void loadTemplate (String fileName) throws SynthesisException

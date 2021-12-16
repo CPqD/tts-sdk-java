@@ -9,8 +9,8 @@ public abstract class InterpretedListener
 		listenerData = null;
 	}
 	
-	public InterpretedListener (String name, boolean toNormalize, Object data) {
-		listenerData = new InterpretedListenerData(name, toNormalize, data);
+	public InterpretedListener (String name, boolean normalize, Object data) {
+		listenerData = new InterpretedListenerData(name, normalize, data);
 	}
 	
 	public InterpretedListenerData getListenerData() {

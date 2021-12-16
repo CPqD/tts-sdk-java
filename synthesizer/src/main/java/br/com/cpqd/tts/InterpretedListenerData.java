@@ -4,15 +4,15 @@ public class InterpretedListenerData
 {
 	private String name;
 	
-	private boolean toNormalize;
+	private boolean normalize;
 	
 	private Object data;
 	
 	
-	public InterpretedListenerData(String name, boolean toNormalize, Object data)
+	public InterpretedListenerData(String name, boolean normalize, Object data)
 	{
 		this.name = name;
-		this.toNormalize = toNormalize;
+		this.normalize = normalize;
 		this.data = data;
 	}
 	
@@ -27,13 +27,13 @@ public class InterpretedListenerData
 	}
 
 
-	public boolean isToNormalize() {
-		return toNormalize;
+	public boolean isNormalize() {
+		return normalize;
 	}
 
 
-	public void setToNormalize(boolean toNormalize) {
-		this.toNormalize = toNormalize;
+	public void setNormalize(boolean normalize) {
+		this.normalize = normalize;
 	}
 
 
