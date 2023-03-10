@@ -6,7 +6,7 @@
 
 	<groupId>br.com.cpqd.tts</groupId>
 	<artifactId>synthesizer-parent</artifactId>
-	<version>4.9-V1</version>
+	<version>4.10-V1</version>
 	<packaging>pom</packaging>
 
 	<name>Java SDK for CPqD TTS</name>
@@ -19,7 +19,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<javasdk.version>1.7</javasdk.version>
+		<javasdk.version>17</javasdk.version>
 		<skipTests>true</skipTests>
 		<maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
 		<maven-dependency-plugin.version>3.0.1</maven-dependency-plugin.version>
